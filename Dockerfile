@@ -8,5 +8,6 @@ RUN mkdir /jenkins-cli
 WORKDIR /jenkins-cli
 ADD . /jenkins-cli
 
-ENTRYPOINT ["./jenkins-cli-wrapper.sh"]
-CMD ["help"]
+# Temporarily disable entrypoint and cmd for testing
+#ENTRYPOINT ["./jenkins-cli-wrapper.sh"]
+#CMD ["help"]
