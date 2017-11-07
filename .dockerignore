@@ -1,0 +1,13 @@
+.git
+.gitignore
+.idea
+README*
+Vagrantfile
+*.iml
+vagrant-libs/
+.DS_Store
+.editorconfig
+.gitlab-ci.yml
+docker-compose.yml
+*.log
+.vagrant/
