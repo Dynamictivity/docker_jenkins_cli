@@ -5,9 +5,7 @@ This is the source code for a Docker image that lets you execute Jenkins CLI fro
 This comes with `jenkins-cli.jar` bundled.
 
 ## Sample run command
-
 Without auth:
-
 ```
 docker run -it --rm \
   -e "JENKINS_URL=http://jenkins.example.com:8080" \
@@ -15,7 +13,6 @@ docker run -it --rm \
 ```
 
 With auth:
-
 ```
 docker run -it --rm \
   -v $HOME/.ssh:/ssh \
@@ -27,8 +24,10 @@ Replace `help` with your jenkins-cli command. See [Jenkins CLI wiki page](https:
 
 
 ## Configuration
-
 The CLI can be configured using environment variables.
 
 - `JENKINS_URL`: **required**
 - `PRIVATE_KEY`: *optional* (default: `/ssh/id_rsa`)
+
+# noscript Branch
+This repo contains a `noscript` branch which keeps the default `Ubuntu` Docker image's `entrypoint` script, instead of the custom `entrypoint` script crafted for `jenkins-cli`. This is useful in such situations as `gitlab-ci` which call the `entrypoint` script and would consequently fail to call the `jenkins-cli` binary properly during the build process.
