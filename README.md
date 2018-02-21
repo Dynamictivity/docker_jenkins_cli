@@ -17,7 +17,7 @@ With auth:
 docker run -it --rm \
   -v $HOME/.ssh:/ssh \
   -e "JENKINS_URL=http://jenkins.example.com:8080" \
-  chickenzord/jenkins-cli help
+  dynamictivity/jenkins-cli help
 ```
 
 Replace `help` with your jenkins-cli command. See [Jenkins CLI wiki page](https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+CLI) for more information.
